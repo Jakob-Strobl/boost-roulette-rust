@@ -1,0 +1,14 @@
+[package]
+name = "boost-roulette"
+version = "0.1.0"
+authors = ["jakob <Jakobpstrobl@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bakkesmod = { git = "https://github.com/Jakob-Strobl/bakkesmod-rust", branch = "master"}
+
+[lib]
+name = "BoostRoulettePlugin"
+crate_type = ["cdylib"]
