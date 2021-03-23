@@ -20,8 +20,17 @@ fn on_boost_pickup(boost: Box<BoostPickupWrapper>, param: Box<CarWrapper>) {
     //   1 => Big boost
     //   2 => Pads
     log_console!("by: {} type {}", boost.addr(), boost.get_boost_type());
+    log_console!("param {}", param.addr());
+    param.demolish();
 
-    log_console!("param: {}", param.addr());
+    // log_console!("location of param {:?}", param.get_location());
+
+    // match param.get_car() {
+    //     Some(car) => {
+    //         log_console!("param: {}", car.addr());
+    //     },
+    //     None => log_console!("param does not contain car"),
+    // }
 } 
 
 fn give_boost(car: Box<CarComponentWrapper>) {
@@ -30,7 +39,10 @@ fn give_boost(car: Box<CarComponentWrapper>) {
 
     // Destroys car if it exists
     match car.get_car() {
-        Some(car) => car.demolish(),
+        Some(car) => {
+            log_console!("CarWrapper.addr = {}", car.addr());
+            // car.demolish();
+        },
         None => log_console!("CarComponent does not contain car"),
     }
 }
