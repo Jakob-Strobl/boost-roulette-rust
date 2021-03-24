@@ -17,6 +17,8 @@ pub fn on_load() {
 }
 
 fn is_enabled_changed(_: String, is_enabled: CVar) {
+    log_console!("is_enabled changed to {}", is_enabled.get_bool_value());
+    
     if is_enabled.get_bool_value() {
         // Hook event on_boost_pickup() only works on freeplay/LAN
         // hook_event_with_caller() - callback is invoked when the event occurs 
