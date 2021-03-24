@@ -8,6 +8,7 @@ edition = "2018"
 
 [dependencies]
 bakkesmod = { git = "https://github.com/Jakob-Strobl/bakkesmod-rust", branch = "dev"}
+rand = "0.8.3"
 
 [lib]
 name = "BoostRoulettePlugin"
