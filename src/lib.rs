@@ -36,8 +36,8 @@ pub fn on_load() {
     // Enable button 
     // TODO look into when and why you would want to save to cfg
     let is_enabled = console::register_cvar("boost_roulette_is_enabled", "0", "Status of Boost Roulette Plugin (0 = Disabled | 1 = Enables)", true, true, 0.0, true, 1.0, false);
-    let big_boost_boom_chance = console::register_cvar("boost_roulette_big_boost_chance", &(100/NUM_BIG_BOOSTS).to_string(), "The percent chance a big boost demos on pickup", true, true, 0.0, true, 100.0, false);
-    let pad_boom_chance = console::register_cvar("boost_roulette_pad_chance", &(100/NUM_PADS).to_string(), "The percent chance a pad demos on pickup", true, true, 0.0, true, 100.0, false);
+    let big_boost_boom_chance = console::register_cvar("boost_roulette_big_boost_chance", &(100.0/NUM_BIG_BOOSTS as f32).to_string(), "The percent chance a big boost demos on pickup", true, true, 0.0, true, 100.0, false);
+    let pad_boom_chance = console::register_cvar("boost_roulette_pad_chance", &(100.0/NUM_PADS as f32).to_string(), "The percent chance a pad demos on pickup", true, true, 0.0, true, 100.0, false);
     
     console::add_on_value_changed(&is_enabled, Box::new(is_enabled_changed));
 }
