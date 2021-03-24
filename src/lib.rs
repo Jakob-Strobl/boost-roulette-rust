@@ -78,7 +78,12 @@ fn get_roll() -> f32 {
 fn roll_big_boost() -> bool {
     let roll = get_roll();
     match console::get_cvar("boost_roulette_big_boost_chance") {
-        Some(chance) => roll < chance.get_float_value(),
+        Some(chance) => {
+            let result = roll < chance.get_float_value();
+            log_console!("{} < {} = {}", roll, chance.get_float_value(), result);
+            
+            result
+        }
         None => {
             log_console!("'boost_roulette_big_boost_chance' cvar not found!");
             false
@@ -89,7 +94,12 @@ fn roll_big_boost() -> bool {
 fn roll_pad() -> bool {
     let roll = get_roll();
     match console::get_cvar("boost_roulette_pad_chance") {
-        Some(chance) => roll < chance.get_float_value(),
+        Some(chance) => {
+            let result = roll < chance.get_float_value();
+            log_console!("{} < {} = {}", roll, chance.get_float_value(), result);
+            
+            result
+        }
         None => {
             log_console!("'boost_roulette_pad_chance' cvar not found!");
             false
