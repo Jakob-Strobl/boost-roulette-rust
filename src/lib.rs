@@ -40,6 +40,8 @@ pub fn on_load() {
     let pad_boom_chance = console::register_cvar("boost_roulette_pad_chance", &(100.0/NUM_PADS as f32).to_string(), "The percent chance a pad demos on pickup", true, true, 0.0, true, 100.0, false);
     
     console::add_on_value_changed(&is_enabled, Box::new(is_enabled_changed));
+    console::add_on_value_changed(&big_boost_boom_chance, Box::new(boom_chance_changed));
+    console::add_on_value_changed(&pad_boom_chance, Box::new(boom_chance_changed));
 }
 
 fn is_enabled_changed(_: String, is_enabled: CVar) {
@@ -53,6 +55,10 @@ fn is_enabled_changed(_: String, is_enabled: CVar) {
     } else {
         game::unhook_event("Function TAGame.VehiclePickup_Boost_TA.Pickup");
     }
+}
+
+fn boom_chance_changed(_: String, boom_chance: CVar) {
+    log_console!("{} => {}", boom_chance.get_name(), boom_chance.get_float_value());
 }
 
 // The parameter for the callback is the object we hooked our event to 
