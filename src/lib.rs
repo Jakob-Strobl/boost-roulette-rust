@@ -28,8 +28,8 @@ impl convert::From<u8> for BoostType {
     }
 }
 
-const NUM_PADS: usize = 28;
 const NUM_BIG_BOOSTS: usize = 6;
+const NUM_PADS: usize = 28;
 
 #[plugin_init]
 pub fn on_load() {
@@ -57,7 +57,7 @@ pub fn on_load() {
         true);
     let pad_boom_chance = console::register_cvar(
         "boost_roulette_pad_chance",
-        &(1.0/NUM_PADS as f32).to_string(),
+        &(2.0/NUM_PADS as f32).to_string(),
         "The probability a pad demos on pickup",
         true,
         true,
