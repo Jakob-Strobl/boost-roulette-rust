@@ -23,7 +23,7 @@ You can easily change the probabilities in the plugin window.
 
 ---
 
-Yes, it is safe, but that doesn't mean much coming from the developer. I am just here for the CONTENT. The code is open source and available for everyone to see and view. Just look in ```src/lib.rs``` to see the source code. It is quite short and straight to the point!  
+Yes, it is safe, but that doesn't mean much coming from the developer. I am just here for the CONTENT. The code is open source and available for everyone to see and view. Just look at [lib.rs](./src/lib.rs) to see the source code. It is quite short and straight to the point!  
 
 I did not upload the source code to bakkesplugins.com because it is written in rust and does not use the BakkesMod SDK directly. If the staff is okay with building the Rust version, I would happily hand them the source code.
 
