@@ -49,7 +49,7 @@ TODO add a link to the video
 
 ---
 
-### Help: How do I play this with friends?
+### Help: How do I play with friends?
 
 You will have to host your own lobby to use the plugin with friends. I recommend using [RocketPlugin](https://bakkesplugins.com/plugins/view/26). You have to do this because private matches are hosted on Psyonix's servers, so plugins will not work on their servers. 
 
