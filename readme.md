@@ -1,17 +1,17 @@
 # Boost Roulette
 
-Russian roulette, but with boost.
-
+Russian roulette, but with boost. Everyone loves having RNG in their competitive games.  
 
 ![Rocket League 2021 03 30 - 11 25 28 06 DVR](https://user-images.githubusercontent.com/8890971/113019258-65b90400-914f-11eb-9869-f81bb457c564.gif)
-
 
 ## What is this?
 
 ---
 
 Boost Roulette is a [BakkesMod](https://www.bakkesmod.com/) plugin for Rocket League on PC.
-The plugin changes the way boost works. Whenever someone picks up boost, there is a chance they will be demolished.
+The plugin changes the way boost works sometimes.
+Whenever someone picks up boost, there is a chance they will be demolished.  
+
 By default, the demo chance depends on the type of boost:  
 
 - Big boost: 1 / 6 = ~16.7%
@@ -23,11 +23,16 @@ You can easily change the probabilities in the plugin window.
 
 ---
 
-The Boost Roulette plugin is disabled by default. To enable it, open up the BakkesMod window (F2) and go to the plugins tab and look for the plugin ```Boost Roulette Plugin```. Click on ```Boost Roulette Plugin``` and click the checkbox under ```Enable Boost Roulette Plugin```. Now, it should work!  
+The Boost Roulette plugin is disabled by default. To enable it:
 
-You can also move the sliders to change the probability of demo per type of boost.
+1. Open up the BakkesMod window (F2)
+2. Go to the ```Plugins``` tab
+3. Click on ```Boost Roulette Plugin```
+4. Click the checkbox under ```Enable Boost Roulette Plugin```
 
-We know everyone loves to add RNG to their competitive games.  
+Now, it should work!  
+
+You can move the sliders to change the probability of demo per type of boost.
 
 **If you are having any issues, I've listed solutions to common problems below.**
 
@@ -55,6 +60,6 @@ TODO add a link to the video
 
 ### Help: How do I play with friends?
 
-You will have to host your own lobby to use the plugin with friends. I recommend using [RocketPlugin](https://bakkesplugins.com/plugins/view/26). You have to do this because private matches are hosted on Psyonix's servers, so plugins will not work on their servers. 
+You will have to host your own lobby to use the plugin with friends. I recommend using [RocketPlugin](https://bakkesplugins.com/plugins/view/26). You have to do this because private matches are hosted on Psyonix's servers, so plugins will not work on their servers.
 
-Only the host needs to have Boost Roulette installed, but everyone should install the Rocket Plugin to join your lobby painlessly.
+Only the host needs to have Boost Roulette installed, but to keep it easy for everyone, I recommend everyone installs RocketPlugin.
