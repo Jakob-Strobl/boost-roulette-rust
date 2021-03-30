@@ -19,6 +19,16 @@ By default, the demo chance depends on the type of boost:
 
 You can easily change the probabilities in the plugin window.
 
+## Is it safe to use?
+
+---
+
+Yes, it is safe, but that doesn't mean much coming from the developer. I am just here for the CONTENT. The code is open source and available for everyone to see and view. Just look in ```src/lib.rs``` to see the source code. It is quite short and straight to the point!  
+
+I did not upload the source code to bakkesplugins.com because it is written in rust and does not use the BakkesMod SDK directly. If the staff is okay with building the Rust version, I would happily hand them the source code.
+
+The source code has two dependencies: my fork of [bakkesmod-rust](https://github.com/Jakob-Strobl/bakkesmod-rust) and [rand](https://github.com/rust-random/rand). Both are open source.  
+
 ## How to Use
 
 ---
@@ -62,4 +72,4 @@ TODO add a link to the video
 
 You will have to host your own lobby to use the plugin with friends. I recommend using [RocketPlugin](https://bakkesplugins.com/plugins/view/26). You have to do this because private matches are hosted on Psyonix's servers, so plugins will not work on their servers.
 
-Only the host needs to have Boost Roulette installed, but to keep it easy for everyone, I recommend everyone installs RocketPlugin.
+Only the host needs to have Boost Roulette installed, but to keep it accessible for everyone, I recommend everyone installs RocketPlugin.
