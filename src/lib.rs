@@ -57,7 +57,7 @@ pub fn on_load() {
         true);
     let pad_boom_chance = console::register_cvar(
         "boost_roulette_pad_chance",
-        &(2.0/NUM_PADS as f32).to_string(),
+        &(1.0/NUM_PADS as f32).to_string(),
         "The probability a pad demos on pickup",
         true,
         true,
