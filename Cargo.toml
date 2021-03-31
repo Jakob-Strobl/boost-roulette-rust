@@ -1,6 +1,6 @@
 [package]
 name = "boost-roulette"
-version = "0.3.0"
+version = "1.0.0"
 authors = ["jakob <Jakobpstrobl@gmail.com>"]
 edition = "2018"
 

@@ -34,7 +34,6 @@ const NUM_PADS: usize = 28;
 #[plugin_init]
 pub fn on_load() {
     // Enable button 
-    // Save to cfg is like a way to save your settings? 
     let is_enabled = console::register_cvar(
         "boost_roulette_is_enabled", 
         "0",
@@ -44,7 +43,7 @@ pub fn on_load() {
         0.0,
         true,
         1.0,
-        true);
+        false);
     let big_boost_boom_chance = console::register_cvar(
         "boost_roulette_big_boost_chance",
         &(1.0/NUM_BIG_BOOSTS as f32).to_string(),
@@ -54,7 +53,7 @@ pub fn on_load() {
         0.0,
         true,
         1.0,
-        true);
+        false);
     let pad_boom_chance = console::register_cvar(
         "boost_roulette_pad_chance",
         &(1.0/NUM_PADS as f32).to_string(),
@@ -64,7 +63,7 @@ pub fn on_load() {
         0.0,
         true,
         1.0,
-        true);
+        false);
     
     console::add_on_value_changed(&is_enabled, Box::new(is_enabled_changed));
     console::add_on_value_changed(&big_boost_boom_chance, Box::new(boom_chance_changed));
@@ -75,9 +74,6 @@ fn is_enabled_changed(_: String, is_enabled: CVar) {
     log_console!("'is_enabled' => {}", is_enabled.get_bool_value());
 
     if is_enabled.get_bool_value() {
-        // Hook event on_boost_pickup() only works on freeplay/LAN
-        // hook_event_with_caller() - callback is invoked when the event occurs 
-        // hook_event_with_caller_post() - callback is invoked after the event occurs (event is completed)
         game::hook_event_with_caller_param("Function TAGame.VehiclePickup_Boost_TA.Pickup", Box::new(on_boost_pickup));
     } else {
         game::unhook_event("Function TAGame.VehiclePickup_Boost_TA.Pickup");
@@ -88,7 +84,7 @@ fn boom_chance_changed(_: String, boom_chance: CVar) {
     log_console!("{} := {}", boom_chance.get_name(), boom_chance.get_float_value());
 }
 
-// The parameter for the callback is the object we hooked our event to 
+// The first parameter for the callback is the event caller
 fn on_boost_pickup(boost: Box<BoostPickupWrapper>, car: Box<CarWrapper>) {
     let boost_type = BoostType::from(boost.get_boost_type());
 
@@ -113,8 +109,6 @@ fn roll_big_boost() -> bool {
     match console::get_cvar("boost_roulette_big_boost_chance") {
         Some(chance) => {
             let result = roll < chance.get_float_value();
-            log_console!("{} < {} = {}", roll, chance.get_float_value(), result);
-            
             result
         }
         None => {
@@ -129,8 +123,6 @@ fn roll_pad() -> bool {
     match console::get_cvar("boost_roulette_pad_chance") {
         Some(chance) => {
             let result = roll < chance.get_float_value();
-            log_console!("{} < {} = {}", roll, chance.get_float_value(), result);
-            
             result
         }
         None => {
