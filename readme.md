@@ -8,8 +8,6 @@ Russian roulette, but with boost. Everyone loves RNG in their competitive games.
   
 ## What is this?
 
----
-
 Boost Roulette is a [BakkesMod](https://www.bakkesmod.com/) plugin for Rocket League on PC.
 The plugin changes the way boost works sometimes.
 Whenever someone picks up boost, there is a chance they will be demolished.  
@@ -23,8 +21,6 @@ You can easily change the probabilities in the plugin window.
 
 ## Is it safe to use?
 
----
-
 Yes, it is safe, but that doesn't mean much coming from the developer. I am just here for the CONTENT. The code is open source and available for everyone to see and view. Just look at [lib.rs](./src/lib.rs) to see the source code. It is quite short and straight to the point!  
 
 I did not upload the source code to bakkesplugins.com because it is written in rust and does not use the BakkesMod SDK directly. If the staff is okay with building the Rust version, I would happily hand them the source code.
@@ -32,8 +28,6 @@ I did not upload the source code to bakkesplugins.com because it is written in r
 The source code has two dependencies: my fork of [bakkesmod-rust](https://github.com/Jakob-Strobl/bakkesmod-rust) and [rand](https://github.com/rust-random/rand). Both are open source.  
 
 ## How to Use
-
----
 
 The Boost Roulette plugin is disabled by default. To enable it:
 
@@ -49,8 +43,6 @@ You can move the sliders to change the probability of demo per type of boost.
 **If you are having any issues, I've listed solutions to common problems below.**
 
 ## Help Desk
-
----
 
 ### Help: The checkbox and probability sliders are not showing up in the plugin window
 
