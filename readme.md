@@ -1,6 +1,6 @@
 # Boost Roulette
 
-Russian roulette, but with boost. Everyone loves having RNG in their competitive games.  
+Russian roulette, but with boost. Everyone loves RNG in their competitive games.  
 
 ![Rocket League 2021 03 30 - 11 25 28 06 DVR](https://user-images.githubusercontent.com/8890971/113019258-65b90400-914f-11eb-9869-f81bb457c564.gif)
 
@@ -64,7 +64,7 @@ Most likely, the plugin loaded without refreshing the setting files.
 ### Help: The ```Install with BakkesMod``` button isn't working
 
 You will have to install the plugin manually. Don't worry. I made a quick video to show you how!  
-TODO add a link to the video
+[Click here](https://youtu.be/EgsTUwlTjbM)
 
 ---
 
