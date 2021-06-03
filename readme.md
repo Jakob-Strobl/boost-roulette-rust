@@ -4,6 +4,14 @@ Russian roulette, but with boost. Everyone loves RNG in their competitive games.
 
 ![Rocket League 2021 03 30 - 11 25 28 06 DVR](https://user-images.githubusercontent.com/8890971/113019258-65b90400-914f-11eb-9869-f81bb457c564.gif)
 
+# Archived
+
+This repo was archived because the Rust implementation of Boost Roulette is no longer supported. Instead, the C++ implementation of the plugin is maintained [here: Boost Roulette](https://github.com/Jakob-Strobl/boost-roulette).
+
+The Rust version was dropped because trying to create a correctly declared plugin required reimplementing BakkesMod's C++ ABI in Rust... a task not worth the time. Instead, all efforts focus on using the officially supported language (C++) and SDK/libraries.
+
+The remaining readme has been untouched.
+
 ## **[Go here to install with Bakkesmod.](https://bakkesplugins.com/plugins/view/207)**
   
 ## What is this?
